@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #2b5876, #4e4376);
+  color: white;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-container {
+  background-color: rgba(45, 55, 72, 0.9);
+  border-radius: 10px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.app-heading {
+  padding: 10px;
+  font-size: 2.5em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-box-todo {
+  flex: 1;
+  margin-right: 10px;
+  height: 45px;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  padding-left: 15px;
+  font-size: 1.1em;
+  outline: none;
+  transition: border 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.input-box-todo::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.input-box-todo:focus {
+  border: 1px solid #4e4376;
+}
+
+.add-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4e4376;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #316fc1;
+  transform: scale(1.05);
+}
+
+.list-item {
+  list-style-type: none;
+  border: 2px solid #ffffff;
+  background-color: rgba(75, 85, 99, 0.7);
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.list-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons i {
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icons i:hover {
+  color: red;
+}
+
+@media print {
+  body {
+      background-color: white;
+  }
+  .main-container {
+      height: auto;
+      padding: 0;
+  }
+  .center-container {
+      width: 100%;
+      border: none;
+      box-shadow: none;
+  }
+  .add-btn {
+      display: none;
+  }
+  .app-heading {
+      margin-bottom: 20px;
+  }
+  .list-item {
+      margin: 5px 0;
+      page-break-inside: avoid;
+  }
+}
